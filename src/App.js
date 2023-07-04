@@ -45,7 +45,7 @@ export default function App() {
 
 function TextExpander({
   children,
-  className = "",
+  className = "text",
   buttonColor = "#38a3a5",
   collapsedNumWords = 10,
   expandButtonText = "Show more",
@@ -69,7 +69,7 @@ function TextExpander({
   };
 
   return (
-    <div className={`${className ? className : "text"}`}>
+    <div className={`${className}`}>
       {text}
       <button style={buttonStyle} onClick={() => setIsExpanded(!isExpanded)}>
         {isExpanded ? collapseButtonText : expandButtonText}
